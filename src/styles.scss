@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    background-image: url("./assets/imagenes/wallpaper.jpeg");
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+
+    padding-bottom: 35px;
+    
+}
+
+@font-face {
+    font-family: 'Square';
+    src: url('./assets/fonts/Carnevalee\ Freakshow.ttf');
+}
+
+.titulo{
+    color: white; 
+    text-align: center; 
+    font-family: Square; 
+    font-size: 450%;  
+    -webkit-text-stroke: .6px black; 
+}
+
+.imgPersonajes{
+    height: 80px; width: 80px;
+}
+

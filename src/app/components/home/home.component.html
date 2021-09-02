@@ -1,0 +1,37 @@
+<h1 class="titulo"> Escuela de hechiceria</h1>
+<div class="container">
+    <div  class="row">
+        <div  class="col-sm-12 col-md-6  ">
+            <div  class=" card dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" [ngStyle]="{'background-image': 'url(' + data.personajesDestacadosCard.img + ')'}" > 
+                <div  class="card-content cardDesp">
+                    <h1  >{{data.personajesDestacadosCard.Nombre}}</h1>
+                   
+                </div>
+            </div>
+            <div  class="dropdown-menu dropdown-menu-end subMenu">
+                <div *ngFor="let casa of data.personajesDestacadosCard.casas" class="itemDesp"   >
+                    <div (click)="navigateToHRA(casa)"  >
+                 
+                    <img class="imgCasas" src="{{casa.img}}" alt="">
+                    <h4 style="text-align: center;">{{casa.nombre}}</h4>
+                    <hr>  
+                    </div>
+                
+                </div>
+         
+                
+            </div>
+          </div>
+
+        <div *ngFor="let item of data.categorias"  class="col-sm-12 col-md-6  ">
+            
+            <div (click)="navigateCategoria(item.Nombre)" class="card" [ngStyle]="{'background-image': 'url(' + item.img + ')'}" > 
+                <div  class="card-content">
+                    <h1  >{{item.Nombre}}</h1>
+                </div>
+            </div>
+        </div>
+  
+
+        
+</div>
